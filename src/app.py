@@ -18,7 +18,7 @@ pipe = pipeline(
     model="facebook/wav2vec2-large-960h", 
     chunk_length_s=180,
     stride_length_s=30,
-    device=0)
+)
 
 def translate(audio_file):
     x = pipe(audio_file)
