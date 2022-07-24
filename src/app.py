@@ -83,4 +83,4 @@ demo = gr.Interface(
     outputs=[raw_output, puncuation_output, capitalization_output])
 
 # demo.launch(share=True)
-gr.TabbedInterface([demo, live_demo], tab_names=["Upload File", "Record Self"]).launch(share=True)
+gr.TabbedInterface([demo, live_demo], tab_names=["Upload File", "Record Self"]).launch()
