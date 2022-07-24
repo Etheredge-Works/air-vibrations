@@ -5,7 +5,7 @@ colorFrom: indigo
 colorTo: gray
 sdk: gradio
 sdk_version: 3.1.1
-app_file: app.py
+app_file: src/app.py
 pinned: false
 license: gpl-3.0
 ---
