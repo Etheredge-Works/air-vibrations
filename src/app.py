@@ -16,8 +16,8 @@ capitalise_model = AutoModelForSeq2SeqLM.from_pretrained("KES/caribe-capitalise"
 
 pipe = pipeline(
     model="facebook/wav2vec2-large-960h", 
-    chunk_length_s=180,
-    stride_length_s=30,
+    chunk_length_s=90,
+    stride_length_s=15,
 )
 
 def translate(audio_file):
