@@ -402,6 +402,8 @@ seaborn==0.11.2
     # via -r requirements.in
 send2trash==1.8.0
     # via notebook
+sentencepiece==0.1.96
+    # via -r requirements.in
 six==1.16.0
     # via
     #   analytics-python
