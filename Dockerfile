@@ -11,4 +11,4 @@ RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requ
 COPY src/ /app/
 
 WORKDIR /app
-RUN python app.py
+CMD python app.py
