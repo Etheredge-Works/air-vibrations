@@ -3,7 +3,21 @@ version: "3.9"
 services:
   app:
     build: .
-    ports:
-      - "7860:7860"
     volumes: 
-      - $flagging_dir:/app/flagging
+      - air-vibrations-flagging:/app/flagging
+    networks:
+      - proxynet
+    expose:
+      - 7860
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.air-vibrations.rule=Host(`${DOMAIN_URL}`)"
+      - "traefik.http.routers.air-vibrations.entrypoints=http"
+
+volumes:
+  air-vibrations-flagging:
+
+networks:
+    proxynet:
+        external:
+            name: "proxynet"
