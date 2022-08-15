@@ -3,8 +3,11 @@ version: "3.9"
 services:
   app:
     build: .
+    restart: always
     volumes: 
       - air-vibrations-flagging:/app/flagging
+    ports:
+      - 7860:7860
     networks:
       - proxynet
     expose:
