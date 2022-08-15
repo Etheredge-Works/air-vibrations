@@ -4,6 +4,8 @@ services:
   app:
     build: .
     restart: always
+    ports:
+      - 8888:8080
     volumes: 
       - air-vibrations-flagging:/app/flagging
     environment:
@@ -16,8 +18,8 @@ services:
       - 8080
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.air-vibrations.rule=Host(`${DOMAIN_URL}`)"
-      - "traefik.http.routers.air-vibrations.entrypoints=http"
+      - "traefik.http.routers.airvibrations.rule=Host(`${DOMAIN_URL}`)"
+      - "traefik.http.routers.airvibrations.entrypoints=http"
 
 volumes:
   air-vibrations-flagging:
