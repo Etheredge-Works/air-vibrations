@@ -4,8 +4,6 @@ services:
   app:
     build: .
     restart: always
-    ports:
-      - 8888:8080
     volumes: 
       - air-vibrations-flagging:/app/flagging
     environment:
@@ -16,6 +14,13 @@ services:
       - proxynet
     expose:
       - 8080
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.airvibrations.rule=Host(`${DOMAIN_URL}`)"
