@@ -133,4 +133,4 @@ demo = gr.Interface(
 #     gr.TabbedInterface([demo, live_demo], tab_names=["Upload File", "Record Self"])
 # )
 interface = gr.TabbedInterface([demo, live_demo], tab_names=["Upload File", "Record Self"])
-interface.launch()
+interface.launch(enable_queue=True)
