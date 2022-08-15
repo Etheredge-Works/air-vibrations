@@ -31,7 +31,7 @@ spell_model = AutoModel.from_pretrained("murali1996/bert-base-cased-spell-correc
 summarizer = pipeline("summarization")
 
 pipe = pipeline(
-    model="facebook/wav2vec2-large-960h", 
+    model="facebook/wav2vec2-base-960h", 
     chunk_length_s=90,
     stride_length_s=15,
 )
