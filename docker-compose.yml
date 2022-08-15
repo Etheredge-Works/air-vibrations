@@ -14,13 +14,13 @@ services:
       - proxynet
     expose:
       - 8080
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.airvibrations.rule=Host(`${DOMAIN_URL}`)"
